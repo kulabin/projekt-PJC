@@ -1,0 +1,16 @@
+D:\programowanie\Clion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -G Ninja -S "C:\Users\pawel\Desktop\programowanie  cwiczenia\sem4\c++\projekt-PJC" -B "C:\Users\pawel\Desktop\programowanie  cwiczenia\sem4\c++\projekt-PJC\cmake-build-debug"
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/programowanie/Clion/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: D:/programowanie/Clion/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (16.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug
