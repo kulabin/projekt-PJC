@@ -522,3 +522,151 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:41 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-51r7ro"
+      binary: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-51r7ro"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-51r7ro'
+        
+        Run Build Command(s): D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -v cmTC_3defd
+        [1/2] D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_3defd.dir/CheckIncludeFile.c.obj -c "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-51r7ro/CheckIncludeFile.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe  -static CMakeFiles/cmTC_3defd.dir/CheckIncludeFile.c.obj -o cmTC_3defd.exe -Wl,--out-implib,libcmTC_3defd.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:41 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7egqw4"
+      binary: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7egqw4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7egqw4'
+        
+        Run Build Command(s): D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -v cmTC_acf47
+        [1/2] D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_acf47.dir/CheckIncludeFile.c.obj -c "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7egqw4/CheckIncludeFile.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe  -static CMakeFiles/cmTC_acf47.dir/CheckIncludeFile.c.obj -o cmTC_acf47.exe -Wl,--out-implib,libcmTC_acf47.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:41 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rfdwyc"
+      binary: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rfdwyc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rfdwyc'
+        
+        Run Build Command(s): D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -v cmTC_70909
+        [1/2] D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_70909.dir/CheckIncludeFile.c.obj -c "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-rfdwyc/CheckIncludeFile.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe  -static CMakeFiles/cmTC_70909.dir/CheckIncludeFile.c.obj -o cmTC_70909.exe -Wl,--out-implib,libcmTC_70909.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "cmake-build-debug/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "cmake-build-debug/_deps/sfml-src/CMakeLists.txt:41 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kouwie"
+      binary: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kouwie"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SIZEOF_VOID_PTR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kouwie'
+        
+        Run Build Command(s): D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -v cmTC_18e51
+        [1/2] D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_18e51.dir/SIZEOF_VOID_PTR.c.obj -c "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kouwie/SIZEOF_VOID_PTR.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe  -static CMakeFiles/cmTC_18e51.dir/SIZEOF_VOID_PTR.c.obj -o cmTC_18e51.exe -Wl,--out-implib,libcmTC_18e51.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/programowanie/Clion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:334 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0tq4a3"
+      binary: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0tq4a3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static"
+      CMAKE_MODULE_PATH: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0tq4a3'
+        
+        Run Build Command(s): D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -v cmTC_3df6a
+        [1/2] D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_3df6a.dir/CheckIncludeFile.c.obj -c "C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-0tq4a3/CheckIncludeFile.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\programowanie\\Clion\\bin\\mingw\\bin\\gcc.exe  -static CMakeFiles/cmTC_3df6a.dir/CheckIncludeFile.c.obj -o cmTC_3df6a.exe -Wl,--out-implib,libcmTC_3df6a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

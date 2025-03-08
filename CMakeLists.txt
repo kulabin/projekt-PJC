@@ -19,4 +19,4 @@ FetchContent_MakeAvailable(SFML)
 
 
 add_executable(projekt_PJC main.cpp)
-target_link_libraries(2324L_23_s31099_AS sfml-graphics)
+target_link_libraries(projekt_PJC sfml-graphics)
