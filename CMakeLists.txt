@@ -18,5 +18,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(SFML)
 
 
-add_executable(projekt_PJC main.cpp)
+add_executable(projekt_PJC main.cpp
+        Menus/BaseMenu.cpp
+        Menus/BaseMenu.h)
 target_link_libraries(projekt_PJC sfml-graphics)
