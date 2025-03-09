@@ -73,6 +73,22 @@ build CMakeFiles/projekt_PJC.dir/Menus/MainMenu.cpp.obj: CXX_COMPILER__projekt_P
   OBJECT_DIR = CMakeFiles\projekt_PJC.dir
   OBJECT_FILE_DIR = CMakeFiles\projekt_PJC.dir\Menus
 
+build CMakeFiles/projekt_PJC.dir/Menus/PauseMenu.cpp.obj: CXX_COMPILER__projekt_PJC_unscanned_Debug C$:/Users/pawel/Desktop/programowanie$ $ cwiczenia/sem4/c++/projekt-PJC/Menus/PauseMenu.cpp || cmake_object_order_depends_target_projekt_PJC
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\projekt_PJC.dir\Menus\PauseMenu.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\projekt_PJC.dir
+  OBJECT_FILE_DIR = CMakeFiles\projekt_PJC.dir\Menus
+
+build CMakeFiles/projekt_PJC.dir/Menus/SettingsMenu.cpp.obj: CXX_COMPILER__projekt_PJC_unscanned_Debug C$:/Users/pawel/Desktop/programowanie$ $ cwiczenia/sem4/c++/projekt-PJC/Menus/SettingsMenu.cpp || cmake_object_order_depends_target_projekt_PJC
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\projekt_PJC.dir\Menus\SettingsMenu.cpp.obj.d
+  FLAGS = -static-libstdc++ -static-libgcc -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\projekt_PJC.dir
+  OBJECT_FILE_DIR = CMakeFiles\projekt_PJC.dir\Menus
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target projekt_PJC
@@ -81,7 +97,7 @@ build CMakeFiles/projekt_PJC.dir/Menus/MainMenu.cpp.obj: CXX_COMPILER__projekt_P
 #############################################
 # Link the executable projekt_PJC.exe
 
-build projekt_PJC.exe: CXX_EXECUTABLE_LINKER__projekt_PJC_Debug CMakeFiles/projekt_PJC.dir/main.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/BaseMenu.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/MainMenu.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
+build projekt_PJC.exe: CXX_EXECUTABLE_LINKER__projekt_PJC_Debug CMakeFiles/projekt_PJC.dir/main.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/BaseMenu.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/MainMenu.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/PauseMenu.cpp.obj CMakeFiles/projekt_PJC.dir/Menus/SettingsMenu.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/libsfml-graphics-s-d.a _deps/sfml-build/lib/libsfml-system-s-d.a _deps/sfml-build/lib/libsfml-window-s-d.a
   FLAGS = -static-libstdc++ -static-libgcc -g
   LINK_FLAGS = -static
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-s-d.a  _deps/sfml-build/lib/libsfml-window-s-d.a  _deps/sfml-build/lib/libsfml-system-s-d.a  -lopengl32  -lwinmm  -lgdi32  _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

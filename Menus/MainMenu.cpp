@@ -1,7 +1,3 @@
-//
-// Created by pawel on 09/03/2025.
-//
-
 #include "MainMenu.h"
 MainMenu::MainMenu(const sf::Font& font) : BaseMenu(font) {
     addMenuItem("Play", {800, 310}, 50);

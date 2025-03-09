@@ -22,5 +22,9 @@ add_executable(projekt_PJC main.cpp
         Menus/BaseMenu.cpp
         Menus/BaseMenu.h
         Menus/MainMenu.cpp
-        Menus/MainMenu.h)
+        Menus/MainMenu.h
+        Menus/PauseMenu.cpp
+        Menus/PauseMenu.h
+        Menus/SettingsMenu.cpp
+        Menus/SettingsMenu.h)
 target_link_libraries(projekt_PJC sfml-graphics)

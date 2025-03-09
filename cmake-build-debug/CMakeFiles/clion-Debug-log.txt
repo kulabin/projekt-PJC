@@ -1,4 +1,4 @@
 D:\programowanie\Clion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/programowanie/Clion/bin/ninja/win/x64/ninja.exe -G Ninja -S "C:\Users\pawel\Desktop\programowanie  cwiczenia\sem4\c++\projekt-PJC" -B "C:\Users\pawel\Desktop\programowanie  cwiczenia\sem4\c++\projekt-PJC\cmake-build-debug"
--- Configuring done (1.7s)
--- Generating done (0.0s)
+-- Configuring done (1.4s)
+-- Generating done (0.1s)
 -- Build files have been written to: C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug
