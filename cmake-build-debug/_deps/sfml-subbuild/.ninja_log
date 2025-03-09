@@ -1,28 +1,13 @@
 # ninja log v5
 2	88	7631733365670989	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	c2216dc6826f5c61
 2	88	7631733365670989	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	c2216dc6826f5c61
-598	708	7632385747131297	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
+563	674	7632385912629115	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
 88	25783	7631733622623093	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	515ea20f403f231
-3	225	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
-88	25783	7631733622623093	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	515ea20f403f231
-225	305	7632385743103942	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
-225	305	7632385743103942	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
-3	225	0	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
-305	378	7632385743844883	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
-305	378	7632385743844883	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
-378	455	7632385744616414	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	766b5e430b07eb44
-378	455	7632385744616414	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	766b5e430b07eb44
-455	525	7632385745307537	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d7a79f80e8e91e7d
-455	525	7632385745307537	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d7a79f80e8e91e7d
-525	598	7632385746038822	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	448920959ff117c5
-525	598	7632385746038822	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	448920959ff117c5
-598	708	7632385747131297	CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
-598	708	7632385747131297	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
-598	708	7632385747131297	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
 4	187	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
-4	187	0	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
+88	25783	7631733622623093	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	515ea20f403f231
 187	266	7632385908549060	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
 187	266	7632385908549060	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
+4	187	0	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
 266	342	7632385909309714	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
 266	342	7632385909309714	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
 342	411	7632385910010270	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	766b5e430b07eb44
@@ -34,4 +19,19 @@
 563	674	7632385912629115	CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
 563	674	7632385912629115	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
 563	674	7632385912629115	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
-563	674	7632385912629115	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
+4	192	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
+4	192	0	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	a969d5ba2e1e3022
+192	269	7632397391640273	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
+192	269	7632397391640273	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	f52ed4bbf4333e08
+269	339	7632397392352006	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
+269	339	7632397392352006	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	a522a699fd61b642
+339	410	7632397393051718	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	766b5e430b07eb44
+339	410	7632397393051718	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	766b5e430b07eb44
+410	481	7632397393762959	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d7a79f80e8e91e7d
+410	481	7632397393762959	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d7a79f80e8e91e7d
+481	554	7632397394494357	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	448920959ff117c5
+481	554	7632397394494357	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	448920959ff117c5
+554	653	7632397395489258	CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
+554	653	7632397395489258	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
+554	653	7632397395489258	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	aaac964dc6154ca5
+554	653	7632397395489258	C:/Users/pawel/Desktop/programowanie  cwiczenia/sem4/c++/projekt-PJC/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	aaac964dc6154ca5
