@@ -3,26 +3,23 @@
 #pragma once
 #include "BaseMenu.h"
 
-class SettingsMenu : public BaseMenu{
+#include "BaseMenu.h"
+#include <vector>
+
+class SettingsMenu : public BaseMenu {
 private:
-    std::vector<std::string> availableLanguages;
-    int currentLanguageIndex;
-    std::vector<sf::Font> availableFonts;
+    std::vector<sf::Font> fonts;
     int currentFontIndex;
-    int currentFontSize;
+    int fontSize;
+    int backIndex;
 
 public:
-    SettingsMenu(const sf::Font& font,const std::vector<std::string>& languages,const std::vector<sf::Font>& fonts,int initialFontSize);
+    SettingsMenu(const sf::Font& font, const std::vector<sf::Font>& fonts, int initialFontSize, int initialFontIndex);
     bool handleEvent(const sf::Event& event) override;
-    int getFontSize() const{
-        return currentFontSize;
-    }
-    const sf::Font& getCurrentFont() const{
-        return availableFonts[currentFontIndex];
-    }
-    std::string getCurrentLanguage() const{
-        return availableLanguages[currentLanguageIndex];
-    }
+
+    int getFontSize() const;
+    const sf::Font& getCurrentFont() const;
+    int getCurrentFontIndex() const;
 };
 
 

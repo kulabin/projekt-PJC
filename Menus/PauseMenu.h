@@ -6,6 +6,9 @@
 class PauseMenu : public BaseMenu {
 public:
     PauseMenu(const sf::Font &font);
+    void setFont(const sf::Font &font) {
+        BaseMenu::setFont(font);
+    }
 };
 
 

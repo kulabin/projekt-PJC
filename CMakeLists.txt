@@ -26,5 +26,11 @@ add_executable(projekt_PJC main.cpp
         Menus/PauseMenu.cpp
         Menus/PauseMenu.h
         Menus/SettingsMenu.cpp
-        Menus/SettingsMenu.h)
+        Menus/SettingsMenu.h
+        GameLogic/Word.cpp
+        GameLogic/Word.h
+        Menus/DifficultyMenu.cpp
+        Menus/DifficultyMenu.h
+        GameLogic/wordManager.cpp
+        GameLogic/wordManager.h)
 target_link_libraries(projekt_PJC sfml-graphics)

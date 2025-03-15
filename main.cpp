@@ -4,27 +4,53 @@
 #include "Menus/MainMenu.h"
 #include "Menus/SettingsMenu.h"
 #include "Menus/PauseMenu.h"
+#include "Menus/DifficultyMenu.h"
+#include "GameLogic/WordManager.h"
 
+const auto WINDOW_WIDTH = 1920;
+const auto WINDOW_HEIGHT = 1080;
 
 auto main() -> int {
-    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Monkey Typer");
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Monkey Typer");
     window.setFramerateLimit(60);
 
     // Ładowanie czcionek
-    sf::Font font1, font2,font3,font4;
     std::vector<sf::Font> fonts;
+    sf::Font font1, font2, font3, font4;
+    std::vector<std::string> fontPaths = {
+            "../Fonts/CreativeVibesTTF.ttf",
+            "../Fonts/JetBrainsMono.ttf",
+            "../Fonts/Minecraft.ttf",
+            "../Fonts/RobotoMono.ttf"
+    };
 
-    if (!font1.loadFromFile("../fonts/CreativeVibesTTF.ttf")) {
-        std::cerr << "Could not load font1!\n";
-        return 1;
+    for (const auto& path : fontPaths) {
+        sf::Font font;
+        if (!font.loadFromFile(path)) {
+            std::cerr << "Error loading font: " << path << "\n";
+        }
+        fonts.push_back(font);
     }
+    sf::Texture backgroundTexture;
+    sf::Sprite backgroundSprite;
+    std::vector<std::string> backgroundPaths = {
+            "../Backgrounds/font1image.png",
+            "../Backgrounds/font2image.png",
+            "../Backgrounds/font3image.png",
+            "../Backgrounds/font4image.png"
+    };
 
+// Załaduj domyślne tło (np. dla pierwszej czcionki)
+    if (!backgroundTexture.loadFromFile(backgroundPaths[0])) {
+        std::cerr << "Could not load background!\n";
+    }
+    backgroundSprite.setTexture(backgroundTexture);
+    auto currentFontIndex = 0;
+    auto currentFontSize = 30;
+    sf::Font currentGameFont = fonts[currentFontIndex];
 
     // Inicjalizacja menu
-    MainMenu mainMenu(font1);
-    std::vector<std::string> languages = {"English", "Polski"};
-    int currentFontSize = 30;
-    sf::Font currentGameFont = font1;
+    MainMenu mainMenu(currentGameFont);
 
     // Główna pętla gry
     while (window.isOpen()) {
@@ -33,8 +59,42 @@ auto main() -> int {
 
         switch (menuResult) {
             case MainMenuOption::Play: {
+                // Wybór trudności
+                DifficultyMenu difficultyMenu(currentGameFont);
+                DifficultyMenuOption chosenDifficulty = difficultyMenu.showMenu(window);
+
+                // Ustawienia gry na podstawie wybranej trudności
+                float wordSpeed = 150.0f; // Domyślna prędkość
+                float spawnInterval = 1.5f; // Domyślny interwał
+
+                switch (chosenDifficulty) {
+                    case DifficultyMenuOption::Easy:
+                        wordSpeed = 100.0f;
+                        spawnInterval = 2.0f;
+                        break;
+                    case DifficultyMenuOption::Medium:
+                        wordSpeed = 200.0f;
+                        spawnInterval = 1.0f;
+                        break;
+                    case DifficultyMenuOption::Hard:
+                        wordSpeed = 300.0f;
+                        spawnInterval = 0.5f;
+                        break;
+                    case DifficultyMenuOption::Custom:
+                        wordSpeed = difficultyMenu.getCustomSpeed();
+                        spawnInterval = difficultyMenu.getcustomSpawnInterval();
+                        break;
+                    case DifficultyMenuOption::Back:
+                        continue;
+                }
+
+                // Inicjalizacja WordManager z wybranymi ustawieniami
+                wordManager wordManager(currentGameFont,currentFontSize,wordSpeed, WINDOW_HEIGHT, spawnInterval, "../Words/Eng.txt",1);
+
                 // Rozpocznij grę
                 bool inGame = true;
+                std::string currentInput; // Przechowuje aktualne wprowadzone znaki
+
                 while (inGame && window.isOpen()) {
                     sf::Event event;
                     while (window.pollEvent(event)) {
@@ -54,8 +114,7 @@ auto main() -> int {
                                     std::cout << "Game saved!\n";
                                     break;
                                 case 2: // Retry
-                                    inGame = true;
-                                    // Reset gry
+                                    wordManager.reset(); // Reset gry
                                     break;
                                 case 3: // Main Menu
                                     inGame = false;
@@ -65,26 +124,64 @@ auto main() -> int {
                                     break;
                             }
                         }
+
+                        // Obsługa wprowadzania tekstu
+                        if (event.type == sf::Event::TextEntered) {
+                            if (event.text.unicode == 8 && !currentInput.empty()) { // Backspace
+                                currentInput.pop_back();
+                            } else if (event.text.unicode == 13) { // Enter
+                                if (wordManager.removeWord(currentInput)) {
+                                    currentInput.clear(); // Wyczyść input po poprawnym usunięciu słowa
+                                }
+                            } else if (event.text.unicode >= 32 && event.text.unicode <= 126) { // Znaki drukowalne
+                                currentInput += static_cast<char>(event.text.unicode);
+                            }
+                        }
+                    }
+
+                    // Aktualizacja stanu gry
+                    wordManager.update(1.0f / 60.0f);
+
+                    // Sprawdź, czy gra się zakończyła
+                    if (wordManager.isGameOver()) {
+                        std::cout << "Game Over!\n";
+                        inGame = false;
                     }
 
                     // Renderowanie gry
                     window.clear();
-                    // ... kod renderujący grę ...
+                    window.draw(backgroundSprite);
+                    wordManager.render(window);
+
+                    // Renderowanie aktualnego inputu
+                    sf::Text inputText(currentInput, currentGameFont, currentFontSize);
+                    inputText.setPosition(50, WINDOW_HEIGHT - 100);
+                    inputText.setFillColor(sf::Color::White);
+                    window.draw(inputText);
+
                     window.display();
                 }
                 break;
             }
 
             case MainMenuOption::Settings: {
-                SettingsMenu settings(font1, languages, fonts, currentFontSize);
-                int settingsResult = settings.run(window);
+                SettingsMenu settings(fonts[currentFontIndex], fonts, currentFontSize, currentFontIndex);
+                settings.run(window);
 
-                // Aktualizuj ustawienia jeśli wybrano "Back"
-                if (settingsResult == 3) {
-                    currentFontSize = settings.getFontSize();
-                    currentGameFont = settings.getCurrentFont();
-                    mainMenu.setFont(currentGameFont);
+                // Aktualizuj ustawienia po zamknięciu menu
+                currentFontSize = settings.getFontSize();
+                currentFontIndex = settings.getCurrentFontIndex();
+                currentGameFont = settings.getCurrentFont();
+
+                // Aktualizuj tło
+                if (currentFontIndex >= 0 && currentFontIndex < backgroundPaths.size()) {
+                    if (!backgroundTexture.loadFromFile(backgroundPaths[currentFontIndex])) {
+                        std::cerr << "Error loading background: " << backgroundPaths[currentFontIndex] << "\n";
+                    }
+                    backgroundSprite.setTexture(backgroundTexture);
                 }
+
+                mainMenu.setFont(currentGameFont);
                 break;
             }
 
@@ -103,6 +200,5 @@ auto main() -> int {
                 break;
         }
     }
-    window.display();
     return 0;
 }

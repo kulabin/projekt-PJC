@@ -16,7 +16,9 @@ class MainMenu : public BaseMenu {
 public:
     MainMenu(const sf::Font& font);
     MainMenuOption showMenu(sf::RenderWindow& window);
-
+    void setFont(const sf::Font &font) {
+        BaseMenu::setFont(font);
+    }
 };
 
 

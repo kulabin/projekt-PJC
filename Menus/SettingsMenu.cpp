@@ -1,39 +1,58 @@
 #include "SettingsMenu.h"
 
-SettingsMenu::SettingsMenu(const sf::Font& font, const std::vector<std::string>& languages, const std::vector<sf::Font>& fonts, int initialFontSize)
-    : BaseMenu(font), availableLanguages(languages), availableFonts(fonts), currentFontSize(initialFontSize){
-    currentLanguageIndex = 0;
-    currentFontIndex = 0;
-    addMenuItem("Change Font", {800, 310}, 50);
-    addMenuItem("Change ingame font size", {800, 425}, 50);
-    addMenuItem("Language", {800, 540}, 50);
-    addMenuItem("Back", {800, 655}, 50);
+SettingsMenu::SettingsMenu(const sf::Font& font, const std::vector<sf::Font>& fonts, int initialFontSize, int initialFontIndex)
+        : BaseMenu(font), fonts(fonts), currentFontIndex(initialFontIndex), fontSize(initialFontSize) {
+
+    float posY = 300.f;
+    const float spacing = 60.f;
+
+    // Dodaj opcje czcionek
+    for (size_t i = 0; i < fonts.size(); ++i) {
+        addMenuItem("Font " + std::to_string(i+1), sf::Vector2f(700.f, posY), 40);
+        posY += spacing;
+    }
+
+    // Dodaj opcje zmiany rozmiaru czcionki
+    addMenuItem("Increase Font Size", sf::Vector2f(700.f, posY), 40);
+    posY += spacing;
+    addMenuItem("Decrease Font Size", sf::Vector2f(700.f, posY), 40);
+    posY += spacing;
+
+    // Dodaj przycisk powrotu
+    addMenuItem("Back", sf::Vector2f(700.f, posY), 40);
+    backIndex = menuItems.size() - 1;
 }
 
-bool SettingsMenu::handleEvent(const sf::Event &event) {
-    if (event.type == sf::Event::KeyPressed) {
-        if (event.key.code == sf::Keyboard::Left || event.key.code == sf::Keyboard::Right) {
-            if (selectedItemIndex == 0) {//jezyk
-                currentLanguageIndex = (currentLanguageIndex + 1) % availableFonts.size();
-            } else {
-                currentLanguageIndex = (currentLanguageIndex - 1) % availableFonts.size();
+bool SettingsMenu::handleEvent(const sf::Event& event) {
+    bool baseResult = BaseMenu::handleEvent(event);
+
+    if (baseResult) {
+        if (selectedItemIndex == backIndex) {
+            return true; // Zamknij menu
+        } else {
+            if (selectedItemIndex < fonts.size()) {
+                currentFontIndex = selectedItemIndex;
+            } else if (selectedItemIndex == fonts.size()) {
+                fontSize += 2;
+                setFontSize(fontSize);
+            } else if (selectedItemIndex == fonts.size() + 1) {
+                fontSize = std::max(12, fontSize - 2);
+                setFontSize(fontSize);
             }
-        } else if (selectedItemIndex == 1) {//czcionka
-            if (event.key.code == sf::Keyboard::Right) {
-                currentFontIndex = (currentFontIndex + 1) % availableFonts.size();
-            } else {
-                currentFontIndex = (currentFontIndex - 1) % availableFonts.size();
-            }
-        } else if (selectedItemIndex == 2) {
-            if (event.key.code == sf::Keyboard::Right) {
-                currentFontSize++;
-            } else {
-                currentFontSize--;
-            }
-            menuItems[2].setString("Font size: " + std::to_string(currentFontSize));
-            setFontSize(currentFontSize);
-            return true;
+            return false; // Pozostań w menu
         }
     }
-    return BaseMenu::handleEvent(event);
+    return false;
+}
+
+int SettingsMenu::getFontSize() const {
+    return fontSize;
+}
+
+const sf::Font& SettingsMenu::getCurrentFont() const {
+    return fonts[currentFontIndex];
+}
+
+int SettingsMenu::getCurrentFontIndex() const {
+    return currentFontIndex;
 }
