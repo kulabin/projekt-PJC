@@ -35,9 +35,9 @@ auto main() -> int {
     sf::Sprite backgroundSprite;
     std::vector<std::string> backgroundPaths = {
             "../Backgrounds/font1image.png",
-            "../Backgrounds/font2image.png",
-            "../Backgrounds/font3image.png",
-            "../Backgrounds/font4image.png"
+            "../Backgrounds/font2image.jpg",
+            "../Backgrounds/font3image.jpg",
+            "../Backgrounds/font4image.jpg"
     };
 
 // Załaduj domyślne tło (np. dla pierwszej czcionki)
